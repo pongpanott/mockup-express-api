@@ -8,12 +8,13 @@
     "browser": true
   },
   "rules": {
-    "brace-style": ["error", "stroustrup"],
+    "brace-style": "off",
     "comma-dangle": "off",
     "no-unused-vars": ["warn"],
     "no-var": ["off"],
     "one-var": ["off"],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-console": "off"
   },
   "plugins": ["prettier"]
 }

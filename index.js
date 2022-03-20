@@ -2,10 +2,20 @@ const express = require('express');
 const logger = require('morgan');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// NOTE: try to say hello world
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+const userRouter = require('./router/user.router');
+
+app.use('/api/user', userRouter);
 
 app.use((err, req, res) => {
   res.locals.message = err.message;
@@ -15,5 +25,6 @@ app.use((err, req, res) => {
   res.render('error');
 });
 
-// setup ci/cd
-module.exports = app;
+app.listen(port, () => {
+  console.log(`Listening on port: ${port}`);
+});
