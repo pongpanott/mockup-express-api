@@ -15,4 +15,5 @@ app.use((err, req, res) => {
   res.render('error');
 });
 
+// setup ci/cd
 module.exports = app;
