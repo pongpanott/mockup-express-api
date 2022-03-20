@@ -1,0 +1,25 @@
+{
+	"name": "mockup-express-api",
+	"version": "1.0.0",
+	"description": "mock up api create with express js",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pongpanott/mockup-express-api.git"
+	},
+	"author": "pongpanott",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/pongpanott/mockup-express-api/issues"
+	},
+	"homepage": "https://github.com/pongpanott/mockup-express-api#readme",
+	"dependencies": {
+		"express": "^4.17.3",
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.15"
+	}
+}
