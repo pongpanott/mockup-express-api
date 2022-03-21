@@ -1,4 +1,4 @@
-const user = require('../model/user.mode');
+const user = require('../model/user.model');
 
 exports.findAll = (req, res) => {
   const allUser = user;
@@ -9,7 +9,6 @@ exports.findAll = (req, res) => {
 exports.findById = (req, res) => {
   try {
     const findUser = user.find((u) => u.id === parseInt(req.params.id, 10));
-    console.log(findUser);
 
     if (findUser) {
       res.json(findUser);
